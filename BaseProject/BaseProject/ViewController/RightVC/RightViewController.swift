@@ -10,6 +10,9 @@ import UIKit
 
 class RightViewController: BaseViewController {
 
+    @IBOutlet var collectionView:UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
