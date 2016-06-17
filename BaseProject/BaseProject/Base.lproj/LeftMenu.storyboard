@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Left Menu View Controller-->
+        <scene sceneID="xdP-48-QVU">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuViewController" id="bb4-jK-vvb" customClass="LeftMenuViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EJd-tg-ceC"/>
+                        <viewControllerLayoutGuide type="bottom" id="IrK-63-m4s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kp6-B4-BEF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INI-su-X5t">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="4Jz-ye-wmv"/>
+                                    <constraint firstAttribute="width" constant="320" id="Mhh-iX-l5B"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mhh-iX-l5B"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="INI-su-X5t" firstAttribute="leading" secondItem="Kp6-B4-BEF" secondAttribute="leading" id="3lT-ac-2tG"/>
+                            <constraint firstItem="IrK-63-m4s" firstAttribute="top" secondItem="INI-su-X5t" secondAttribute="bottom" id="6KZ-z7-rR7"/>
+                            <constraint firstAttribute="trailing" secondItem="INI-su-X5t" secondAttribute="trailing" id="736-8n-o2W"/>
+                            <constraint firstItem="INI-su-X5t" firstAttribute="leading" secondItem="Kp6-B4-BEF" secondAttribute="leadingMargin" constant="-20" id="O3N-gv-ScX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="INI-su-X5t" secondAttribute="trailing" constant="-20" id="ZKM-2e-M0Q"/>
+                            <constraint firstItem="INI-su-X5t" firstAttribute="top" secondItem="Kp6-B4-BEF" secondAttribute="topMargin" id="fMg-01-3g3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="O3N-gv-ScX"/>
+                                <exclude reference="ZKM-2e-M0Q"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="INI-su-X5t" id="L4V-rl-g8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7el-1r-W0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-167"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="M9J-Td-P8r">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Xih-hC-C7i" customClass="HomeViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9w-EE-HT0"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPP-xi-ezh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0eY-t1-qZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-D3-Fx5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="igu-59-ZU8"/>
+                                    <constraint firstAttribute="height" constant="568" id="mOJ-5w-KNZ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="9mg-ca-aDD">
+                                    <size key="itemSize" width="320" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oIz-GR-uwk">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="igu-59-ZU8"/>
+                                    </mask>
+                                </variation>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdm-ys-yph">
+                                <rect key="frame" x="47" y="310" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="presentLeftMenuViewController" destination="Xih-hC-C7i" eventType="touchUpInside" id="ZZ9-BP-Cch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-Ps-AoI">
+                                <rect key="frame" x="230" y="310" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="presentRightMenuViewController" destination="Xih-hC-C7i" eventType="touchUpInside" id="1UI-QY-38F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vDL-D3-Fx5" secondAttribute="trailing" constant="-20" id="0Uw-Oa-Qrk"/>
+                            <constraint firstItem="vDL-D3-Fx5" firstAttribute="leading" secondItem="0eY-t1-qZ4" secondAttribute="leading" id="BdO-Gw-G5V"/>
+                            <constraint firstItem="QPP-xi-ezh" firstAttribute="top" secondItem="vDL-D3-Fx5" secondAttribute="bottom" id="Qox-HB-gl9"/>
+                            <constraint firstAttribute="trailing" secondItem="vDL-D3-Fx5" secondAttribute="trailing" id="TR0-pf-Pv5"/>
+                            <constraint firstItem="vDL-D3-Fx5" firstAttribute="top" secondItem="0eY-t1-qZ4" secondAttribute="topMargin" id="epo-5K-lyY"/>
+                            <constraint firstItem="vDL-D3-Fx5" firstAttribute="leading" secondItem="0eY-t1-qZ4" secondAttribute="leadingMargin" constant="-20" id="rio-5y-a4P"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Uw-Oa-Qrk"/>
+                                <exclude reference="rio-5y-a4P"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vDL-D3-Fx5" id="lAf-X3-Xnt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQm-oF-CUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="193"/>
+        </scene>
+    </scenes>
+</document>
